@@ -83,8 +83,8 @@ var Selection = createReactClass({
     var scrollY = Math.abs(parentNode.getClientRects()[0].top - this.cumulativeOffset(parentNode).top)
     var scrollX = Math.abs(parentNode.getClientRects()[0].left - this.cumulativeOffset(parentNode).left)
     nextState.startPoint = {
-      x: e.clientX - this.cumulativeOffset(parentNode).top + scrollX,
-      y: e.clientY - this.cumulativeOffset(parentNode).left + scrollY
+      x: e.clientX + scrollX,
+      y: e.clientY + scrollY
     };
     this.setState(nextState);
     window.document.addEventListener('mousemove', this._onMouseMove);
@@ -117,8 +117,8 @@ var Selection = createReactClass({
       var scrollY = Math.abs(parentNode.getClientRects()[0].top - this.cumulativeOffset(parentNode).top)
       var scrollX = Math.abs(parentNode.getClientRects()[0].left - this.cumulativeOffset(parentNode).left)
       var endPoint = {
-        x: e.clientX - this.cumulativeOffset(parentNode).top + scrollX,
-        y: e.clientY - this.cumulativeOffset(parentNode).left + scrollY
+        x: e.clientX + scrollX,
+        y: e.clientY + scrollY
       };
       this.setState({
         endPoint: endPoint,
