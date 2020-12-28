@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-demo": "browserify ./sample/sample.jsx -o ./sample/sample.js",
-    "build": "browserify ./src/Selection.js -o ./lib/Selection.js"
+    "build": "babel ./src/Selection.js -o ./lib/Selection.js"
   },
   "browserify": {
     "transform": [
