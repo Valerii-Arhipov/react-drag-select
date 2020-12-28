@@ -50,6 +50,6 @@
     "reactify": "^1.1.1"
   },
   "babel": {
-    "presets": ["@babel/preset-react"]
+    "presets": ["@babel/preset-react", "@babel/preset-env"]
   }
 }
